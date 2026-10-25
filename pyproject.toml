@@ -1,0 +1,47 @@
+[project]
+name = "rat_yolo_pose_estimation"
+version = "0.1.0"
+description = "YOLO-Based Rat Pose Estimation Across Two Camera Angles in Lawn Area"
+readme = "README.md"
+authors = [
+    { email = "314830163+NadaMuhammad9@users.noreply.github.com" }
+]
+requires-python = ">=3.13, <3.14"
+dependencies = [
+    "matplotlib>=3.11.2",
+    "numpy>=2.2.0",
+    "opencv-python>=5.0.0.93",
+    "pandas>=3.0.5",
+    "pillow>=12.3.0",
+    "pyyaml>=6.0.3",
+    "seaborn>=0.13.2",
+    "torch>=2.6.0",
+    "torchaudio>=2.6.0",
+    "torchvision>=0.21.0",
+    "ultralytics>=8.4.155",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.0",
+]
+
+[project.scripts]
+rat_yolo_pose_estimation = "rat_yolo_pose_estimation.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.12.13,<0.13.0"]
+build-backend = "uv_build"
+
+[[tool.uv.index]]
+name = "pytorch-cu124"
+url = "https://download.pytorch.org/whl/cu124"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu124" }
+torchvision = { index = "pytorch-cu124" }
+torchaudio = { index = "pytorch-cu124" }
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]

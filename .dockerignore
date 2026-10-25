@@ -1,0 +1,27 @@
+.git/
+.github/
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# the pre trained model 
+yolo26s-pose.pt
+
+# Local datasets, training outputs, and model weights are supplied at runtime.
+data/
+runs/
+weights/
+*.pt
+
+Notebooks/
+*.ipynb
+
+.env
+.env.*
+!.env.example
+Dockerfile
+dockerfile

@@ -1,0 +1,29 @@
+# data path
+#path: data
+path: C:\Users\nada\rat_yolo_pose_estimation\data
+
+train: images/train 
+val: images/val 
+test: images/test
+
+# keypoints
+kpt_shape: [10, 3]  # [number of keypoints, number of dims]
+
+kpt_names :
+- Right Hindlimb
+- Left Hindlimb
+- Right Forelimb
+- Left Forelimb
+- Tail Root
+- Head
+- Neck
+- Spine Midpoint
+- Tail Midpoint
+- Tail Endpoint
+
+# Right/Left keypoints to swap when flipping image horizontally during Data Augmentation
+flip_idx: [1, 0, 3, 2, 4, 5, 6, 7, 8, 9] 
+
+# classes
+names:
+  0: rat
